@@ -151,7 +151,7 @@ main {
 
 #featuredImage {
     width: 100%;
-    min-height: 65vh;
+    min-height: 75vh;
     box-sizing: border-box;
     position: relative;
     display: flex;
@@ -161,17 +161,21 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     padding: 5vh 5vw;
+    box-shadow: inset 0 0 13rem rgba(0, 0, 0, 0.75);
 }
 
 #featuredImage p {
+    top: 30vh;
     font-size: smaller;
-    margin: 0 0 8vh;
+    margin: 18vh 0 6vh 0;
+    font-weight: normal;
 }
 
 #featuredImage h1 {
     max-width: 50%;
     margin: 0;
     color: white;
+    font-weight: normal;
 }
 
 #featuredImage div {

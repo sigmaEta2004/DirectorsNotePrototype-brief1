@@ -16,7 +16,7 @@ body {
     background-color: var(--backgroundColor);
     margin: 0;
     padding: 0;
-    height: 25vh;
+    height: 20vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -28,18 +28,19 @@ body {
 }
 
 .header img {
-    height: 12vh;
+    height: 10vh;
     width: auto;
     position: relative;
     padding-top: 1.5vh;
-    padding-bottom: 3vh;
+    padding-bottom: 1.5vh;
 }
 
 .headerNav {
     display: flex;
     justify-content: center;
     width: 100%;
-    padding-top: 2vh;   
+    padding-top: 1vh; 
+    top: 10vh;  
 }
 
 .headerNavItem {
@@ -146,12 +147,12 @@ body {
 }
 
 main {
-    padding-top: 25vh;
+    padding-top: 20vh;
 }
 
 #featuredImage {
     width: 100%;
-    min-height: 75vh;
+    min-height: 65vh;
     box-sizing: border-box;
     position: relative;
     display: flex;

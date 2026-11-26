@@ -1,0 +1,327 @@
+:root {
+    --backgroundColor: #1e1e1e;
+    --mainColor: #00ff7d;
+    --mainFont: "Open Sans";
+}
+
+body {
+    background-color: white;
+    color: var(--mainColor);
+    padding: 0;
+    margin: 0;
+    font-family: var(--mainFont);
+}
+
+.header {
+    background-color: var(--backgroundColor);
+    margin: 0;
+    padding: 0;
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    font-weight:bolder;
+    top: 0;
+}
+
+.header img {
+    height: 12vh;
+    width: auto;
+    position: relative;
+    padding-top: 1.5vh;
+    padding-bottom: 3vh;
+}
+
+.headerNav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 2vh;   
+}
+
+.headerNavItem {
+    padding: 1vh 1.5vw;
+    color: white;
+    transition: all 0.2s linear;
+}
+
+.headerNavItem:hover {
+    color: var(--mainColor);
+    cursor: pointer;
+}
+
+#submit {
+    border: solid 3px var(--mainColor);
+    color: var(--mainColor);
+    background-color: black;
+}
+
+    #submit:hover {
+        background-color: var(--mainColor);
+        color:black;
+    }
+
+#headerNavDropdown {
+    background-color: #1e1e1e;
+    position: absolute;
+    top: 100%;
+    left: -3vw;
+    min-width: 100%;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.4s ease, transform 0.4s ease,
+                visibility 0s linear 0.4s;
+}
+
+#headerNavDropdown.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition-delay: 0s;
+}
+
+#channels {
+    position: relative;
+}
+
+.headerNavDropdownItem {
+    padding: 1vh 0;
+    color: white;
+    font-size: 12px;
+    margin: 1vh 3vw;
+    padding-right: 3vw;
+    font-weight: normal;
+}
+
+.headerNavDropdownItem:hover {
+    color: var(--mainColor);
+    cursor: pointer;
+}
+
+#socialMediaIcons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 5rem;
+    box-sizing: border-box;
+    padding: 1vh 0.5rem;
+
+}
+
+.HeaderIcons {
+    flex: 0 0 20px;
+    height: 20px;
+    width: 20px;
+    position: relative;
+}
+
+.HeaderIcons::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--mainColor);
+}
+
+#socialMediaIcons .HeaderIcons img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    object-fit: contain;
+    background-color: #00ff7d;
+    border-radius: 20%;
+}
+
+#socialMediaIcons .HeaderIcons img:hover {
+    background-color: aquamarine;
+}
+
+main {
+    padding-top: 25vh;
+}
+
+#featuredImage {
+    width: 100%;
+    min-height: 65vh;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-image: url('src/coyotes_03.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 5vh 5vw;
+}
+
+#featuredImage p {
+    font-size: smaller;
+    margin: 0 0 8vh;
+}
+
+#featuredImage h1 {
+    max-width: 50%;
+    margin: 0;
+    color: white;
+}
+
+#featuredImage div {
+    border: solid 2px var(--mainColor);
+    color: white;
+    width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#FilmCardGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    width: 90%;
+    max-width: 1200px;
+    margin: 4rem auto;
+}
+
+.filmcard {
+    height: 50vh;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: gray;
+}
+
+footer hr {
+    width: 90%;
+    background-color: gray;
+}
+
+#footerCards {
+    display: flex;
+    justify-content: center;
+}
+
+.footerCardItem {
+    width: 25%;
+    height: 30vh;
+    background-color: white;
+    margin: 10px 20px;
+    border: solid 2px black;
+}
+
+.footerCardItemTitle {
+    width: 100%-10px;
+    height: 40px;
+    background-color:black;
+    color:white;
+    font-weight:bolder;
+    text-align:left;
+    padding-top:10px;
+    padding-left: 10px;
+}
+.footerCardItem p {
+    color: var(--backgroundColor);
+    margin: 10px 10px 30px 10px;
+    font-size: smaller;
+}
+
+#submitFilmsCardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:40%;
+}
+
+#submitFilmCardButton {
+    width: 50%;
+    height: 40%;
+    background-color: #1e1e1e;
+    justify-self: center;
+    text-align: center;
+    text-justify:auto;
+    color: white;
+    border-radius: 10px;
+}
+
+#newsletterEmail {
+    border: solid 2px var(--mainColor);
+    border-radius: 10px 0 0 10px;
+    height: 40px;
+    width: 50%;
+    justify-self: center;
+    align-self: center;
+    margin-right: 0;
+}
+
+#newsletterForm {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#newsletterForm button {
+    margin-left: 0;
+    background-color: var(--mainColor);
+    border: 2px solid var(--mainColor);
+    height: 46px;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    
+}
+
+#footerCardYT {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-image: url("src/Directors-Notes-on-youTube.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#footerLinks {
+    display: flex;
+    justify-content: center;
+}
+
+#footerLinks p {
+    margin: 10px 10px 40px 10px;
+    text-decoration: underline;
+    text-decoration-color: var(--mainColor);
+    color: black;
+    cursor: pointer;
+}
+
+#upButton {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    padding-bottom: 5px;
+    bottom: 30px;
+    background-color: var(--mainColor);
+    color:var(--backgroundColor);
+    font-size: 40px;
+    font-weight: bolder;
+    transform: rotate(-90deg);
+    cursor: pointer;
+    transition: opacity 1s ease;
+}
+
+.upbuttonHidden {
+    opacity: 0;
+    pointer-events: none;
+}
